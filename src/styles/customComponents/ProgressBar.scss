@@ -1,0 +1,60 @@
+.progress-wrapper {
+  box-shadow: 0px 20px 24px -4px rgba(0, 0, 0, 0.08);
+  .main-container {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0.2rem 0 1rem 1rem;
+    background: hsla(268, 50%, 59%, 1);
+
+    background: hsla(268, 50%, 59%, 1);
+
+    background: linear-gradient(
+      360deg,
+      hsla(268, 50%, 59%, 1) 0%,
+      hsla(222, 94%, 79%, 1) 100%
+    );
+
+    background: -moz-linear-gradient(
+      360deg,
+      hsla(268, 50%, 59%, 1) 0%,
+      hsla(222, 94%, 79%, 1) 100%
+    );
+
+    background: -webkit-linear-gradient(
+      360deg,
+      hsla(268, 50%, 59%, 1) 0%,
+      hsla(222, 94%, 79%, 1) 100%
+    );
+
+    .title {
+      padding: 1.5rem 0 0.25rem 0;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .steps-completed {
+      font-weight: 200;
+      font-size: 11px;
+    }
+  }
+
+  .steps {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .progress-wrapper {
+    .main-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .steps {
+      display: block;
+    }
+  }
+}
