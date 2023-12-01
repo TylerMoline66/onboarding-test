@@ -13,6 +13,13 @@
     display: flex;
     justify-content: space-evenly;
     padding: 1rem 0;
+
+    .star {
+      &:hover {
+        transition: ease-in-out 0.5s;
+        transform: scale(1.5);
+      }
+    }
   }
 
   .review-text {

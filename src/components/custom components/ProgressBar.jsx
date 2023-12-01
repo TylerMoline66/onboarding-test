@@ -16,7 +16,9 @@ export default function ProgressBar(props) {
             disabled={true}
             checked={stepOne}
           />
-          <label htmlFor="personal-info">Personal Info</label>
+          <label htmlFor="personal-info">
+            <span>Personal Info</span>
+          </label>
         </div>
 
         <div className="monthly-orders">
@@ -27,7 +29,9 @@ export default function ProgressBar(props) {
             disabled={true}
             checked={stepTwo}
           />
-          <label htmlFor="monthly-orders">Monthly Orders</label>
+          <label htmlFor="monthly-orders">
+            Monthly Orders <span>Required</span>
+          </label>
         </div>
 
         <div className="billing">
@@ -38,7 +42,9 @@ export default function ProgressBar(props) {
             disabled={true}
             checked={stepThree}
           />
-          <label htmlFor="billing">Billing</label>
+          <label htmlFor="billing">
+            Billing <span>Required</span>
+          </label>
         </div>
       </div>
     </div>

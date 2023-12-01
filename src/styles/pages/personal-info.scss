@@ -1,0 +1,17 @@
+.onboarding-section {
+  display: flex;
+  .progress-bar {
+    width: 20rem;
+    box-shadow: 0px 20px 24px -4px rgba(0, 0, 0, 0.08);
+  }
+}
+
+@media (max-width: 1024px) {
+  .onboarding-section {
+    flex-direction: column;
+
+    .progress-bar {
+      box-shadow: none;
+    }
+  }
+}

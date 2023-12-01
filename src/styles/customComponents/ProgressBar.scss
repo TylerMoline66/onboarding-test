@@ -1,5 +1,4 @@
 .progress-wrapper {
-  box-shadow: 0px 20px 24px -4px rgba(0, 0, 0, 0.08);
   .main-container {
     color: white;
     display: flex;
@@ -45,6 +44,12 @@
   }
 }
 
+@media (max-width: 1024px) {
+  .progress-wrapper {
+    width: 100vw;
+  }
+}
+
 @media (min-width: 1024px) {
   .progress-wrapper {
     .main-container {
@@ -54,7 +59,31 @@
     }
 
     .steps {
-      display: block;
+      display: flex;
+      flex-direction: column;
+
+      .personal-info,
+      .monthly-orders,
+      .billing {
+        padding: 10% 0 10% 5%;
+        font-size: 13px;
+
+        input {
+          margin-right: 5%;
+        }
+
+        span {
+          color: #6675ff;
+        }
+      }
+
+      .monthly-orders,
+      .billing {
+        span {
+          font-size: 10px;
+          margin-left: 2%;
+        }
+      }
     }
   }
 }

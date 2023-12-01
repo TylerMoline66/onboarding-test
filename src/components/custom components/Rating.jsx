@@ -4,11 +4,11 @@ export default function rating() {
   return (
     <div className="review-wrapper">
       <div className="stars">
-        <FontAwesomeIcon icon="fa-solid fa-star" size="lg" />
-        <FontAwesomeIcon icon="fa-solid fa-star" size="lg" />
-        <FontAwesomeIcon icon="fa-solid fa-star" size="lg" />
-        <FontAwesomeIcon icon="fa-solid fa-star" size="lg" />
-        <FontAwesomeIcon icon="fa-solid fa-star" size="lg" />
+        <FontAwesomeIcon className="star" icon="fa-solid fa-star" size="lg" />
+        <FontAwesomeIcon className="star" icon="fa-solid fa-star" size="lg" />
+        <FontAwesomeIcon className="star" icon="fa-solid fa-star" size="lg" />
+        <FontAwesomeIcon className="star" icon="fa-solid fa-star" size="lg" />
+        <FontAwesomeIcon className="star" icon="fa-solid fa-star" size="lg" />
       </div>
       <div className="review-text">
         “In amet turpis eget donec bibendum sit congue cras. Fusce parturient

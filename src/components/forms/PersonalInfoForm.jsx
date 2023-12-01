@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 import { useUserContext } from "../context/UserContext";
 import Button from "../custom components/button";
 
@@ -14,10 +12,22 @@ export default function PersonalInfoForm() {
     storeUrl,
     setStoreUrl,
     history,
+    setUserProgress,
   } = useUserContext();
 
+  const disabled =
+    !userStoreName.trim() ||
+    !fullName.trim() ||
+    !email.trim() ||
+    !storeUrl.trim();
+
   const handleNextClick = () => {
-    history.push("/orders");
+    if (!disabled) {
+      setUserProgress(1);
+      history.push("/orders");
+    } else {
+      setUserProgress(0);
+    }
   };
 
   return (
@@ -74,15 +84,7 @@ export default function PersonalInfoForm() {
         />
       </div>
 
-      <Button
-        disabled={
-          !userStoreName.trim() ||
-          !fullName.trim() ||
-          !email.trim() ||
-          !storeUrl.trim()
-        }
-        onClick={handleNextClick}
-      >
+      <Button disabled={disabled} onClick={handleNextClick}>
         Confirm
       </Button>
     </div>

@@ -6,31 +6,26 @@ import PersonalInfoForm from "../forms/PersonalInfoForm";
 import Rating from "../custom components/Rating";
 
 export default function PersonalInfo() {
-  const {
-    fullName,
-    setFullName,
-    email,
-    setEmail,
-    userProgress,
-    stepOne,
-    stepTwo,
-    stepThree,
-  } = useUserContext();
+  const { userProgress, stepOne, stepTwo, stepThree } = useUserContext();
 
   return (
     <div className="onboarding-section">
-      <ProgressBar
-        userProgress={userProgress}
-        stepOne={stepOne}
-        stepTwo={stepTwo}
-        stepThree={stepThree}
-      />
+      <div className="progress-bar">
+        <ProgressBar
+          userProgress={userProgress}
+          stepOne={stepOne}
+          stepTwo={stepTwo}
+          stepThree={stepThree}
+        />
+      </div>
 
-      <IntroInfo name="Tyler" />
+      <div className="main-info">
+        <IntroInfo name="Tyler" />
 
-      <PersonalInfoForm />
+        <PersonalInfoForm />
 
-      <Rating />
+        <Rating />
+      </div>
     </div>
   );
 }
